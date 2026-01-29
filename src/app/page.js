@@ -68,7 +68,7 @@ export default function Home() {
           <div className="text-[14px] md:text-[16px] font-roboto font-light">
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">МЕДИРЕН® таблетки №30</span>
+                <span className="text-[#0C54A0]">МЕДИРЕН® таблетки №60</span>
               </strong>
             </div>
             <div className="mb-4">
@@ -156,8 +156,6 @@ export default function Home() {
               </p>
               <p className="mt-2 font-medium">
                 20 шт. - блистеры (3) - пачки картонные.
-                <br />
-                20 шт. - блистеры (6) - пачки картонные.
               </p>
             </div>
             <div className="mb-4">
