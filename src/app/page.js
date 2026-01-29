@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <div className="mt-[50px]">
           <h2 className="font-semibold text-center text-4xl font-roboto">
-            «МЕДИРЕН ® »
+            « МЕДИРЕН ® »
           </h2>
           <div className="flex justify-center flex-wrap md:flex-nowrap md:items-end">
             <img
@@ -68,13 +68,14 @@ export default function Home() {
           <div className="text-[14px] md:text-[16px] font-roboto font-light">
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">МЕДИРЕН</span>®
+                <span className="text-[#0C54A0]">МЕДИРЕН® таблетки №30</span>
               </strong>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">Торговое название: </span>{" "}
-                МЕДИРЕН®
+                <span className="text-[#0C54A0]">
+                  Торговое название: МЕДИРЕН®
+                </span>{" "}
               </strong>
             </div>
             <div className="mb-4">
@@ -84,13 +85,15 @@ export default function Home() {
               </strong>
             </div>
             <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">
-                  Форма выпуска, упаковка:{" "}
-                </span>{" "}
+              <p className="font-roboto text-[14px] md:text-[16px]">
+                <strong className="font-medium">
+                  <span className="text-[#0C54A0]">
+                    Форма выпуска, упаковка:
+                  </span>
+                </strong>{" "}
                 Таблетки, покрытые оболочкой, оранжевые, круглые,
-                двояковыпуклые, с гладкой поверхностью.{" "}
-              </strong>
+                двояковыпуклые, с гладкой поверхностью.
+              </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
@@ -371,7 +374,9 @@ export default function Home() {
                 При отеках, вызванных нарушениями функции сердца или почек,
                 потребление большого количества жидкости противопоказано.
               </p>
-              <p className="mt-2 font-medium">Вспомогательные вещества</p>
+              <p className="mt-2 font-semibold font-medium">
+                Вспомогательные вещества
+              </p>
               <p className="font-medium">
                 Пациентам с недостаточностью лактазы, дефицитом сахаразы/
                 изомальтазы, непереносимостью лактозы, фруктозы или
@@ -379,7 +384,7 @@ export default function Home() {
                 Медирен®. Возможен прием препарата Медирен®, капли для приема
                 внутрь, который не содержит вышеуказанные сахара.
               </p>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 font-semibold font-medium">
                 Информация для пациентов с сахарным диабетом:
               </p>
               <p className="font-medium">
@@ -387,7 +392,7 @@ export default function Home() {
                 соответствует менее чем 0.04 ХЕ, в максимальной суточной дозе (6
                 таблеток) – менее 0.24 ХЕ.
               </p>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 font-semibold font-medium">
                 Влияние на способность к управлению транспортными средствами и
                 механизмами
               </p>
@@ -408,9 +413,7 @@ export default function Home() {
                 При передозировке возможно усиление выраженности дозозависимых
                 нежелательных реакций.
               </p>
-              <p className="mt-1 font-medium">
-                <strong>Лечение:</strong> симптоматическое.
-              </p>
+              <p className="mt-1 font-medium">Лечение: симптоматическое.</p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
@@ -420,8 +423,11 @@ export default function Home() {
               </strong>
               <p className="mt-2 font-medium">
                 Комбинация с антибактериальными средствами возможна и
-                целесообразна. Исследования взаимодействия с другими
-                лекарственными препаратами не проводились.
+                целесообразна.
+              </p>
+              <p className="mt-1 font-medium">
+                Исследования взаимодействия с другими лекарственными препаратами
+                не проводились.
               </p>
             </div>
 
@@ -431,7 +437,7 @@ export default function Home() {
                   Условия хранения препарата
                 </span>
               </strong>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 text-[14px]">
                 Препарат следует хранить в недоступном для детей месте при
                 температуре не выше 25°С.
               </p>
@@ -440,7 +446,7 @@ export default function Home() {
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Срок годности препарата</span>
               </strong>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 text-[14px]">
                 Срок годности — 2 года.
                 <br />
                 Не применять по истечении срока годности.
@@ -450,7 +456,7 @@ export default function Home() {
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Условия реализации</span>
               </strong>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 text-[14px]">
                 Препарат отпускают без рецепта.
               </p>
             </div>
@@ -458,7 +464,7 @@ export default function Home() {
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Производитель:</span>
               </strong>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 text-[14px]">
                 ООО &quot;SPRING PHARMACEUTIC&quot; СП Великобритания.
               </p>
             </div>
@@ -469,7 +475,7 @@ export default function Home() {
                   деятельности:
                 </span>
               </strong>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 text-[14px]">
                 Республика Узбекистан, Наманганская область, Касансайский район,
                 Кукимбой, Навбахор МСГ, улица Булак, дом 129.
                 <br />
