@@ -4,13 +4,14 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata = {
-  metadataBase: new URL("https://proetsin.uz"),
-  title: "PROETSIN",
+  metadataBase: new URL("https://proetsinsirop.uz"),
+  title: "Проецин® сироп | PROETSIN",
   description:
-    "Проецин® — комбинированный растительный препарат с секретолитическим, противовоспалительным и противовирусным действием для лечения острого и хронического риносинусита. Производитель: Spring Pharmaceutic.",
+    "Проецин® сироп — комбинированный растительный препарат с секретолитическим, противовоспалительным и противовирусным действием для лечения острого и хронического риносинусита. Производитель: Spring Pharmaceutic.",
   keywords: [
     "Проецин",
-    "проецин таблетки",
+    "проецин сироп",
+    "Проецин сироп",
     "синусит лечение",
     "риносинусит",
     "простуда",
@@ -21,6 +22,7 @@ export const metadata = {
     "фитопрепарат",
     "противовирусный",
     "proetsin",
+    "proetsin sirop",
     "sinusit",
     "burni tiqilishi",
     "o'simlik preparati",
@@ -40,21 +42,21 @@ export const metadata = {
     google: "EeNrX_Vhd4bMEJnslGv6D89shImpFKT1eTXHeeqUF8I",
   },
   alternates: {
-    canonical: "https://proetsin.uz",
+    canonical: "https://proetsinsirop.uz",
   },
   openGraph: {
     type: "website",
-    url: "https://proetsin.uz",
-    title: "Проецин® — Растительный препарат при синусите",
+    url: "https://proetsinsirop.uz",
+    title: "Проецин® сироп — Растительный препарат при синусите",
     description:
-      "Комбинированный растительный препарат с секретолитическим и противовоспалительным действием для лечения острого и хронического риносинусита.",
+      "Проецин® сироп — комбинированный растительный препарат с секретолитическим и противовоспалительным действием для лечения острого и хронического риносинусита.",
     siteName: "PROETSIN",
     images: [
       {
-        url: "/proetsin.webp",
+        url: "/proetsinsirop.webp",
         width: 900,
         height: 800,
-        alt: "Проецин® таблетки",
+        alt: "Проецин® сироп",
       },
       {
         url: "/proetsin-logo.svg",
@@ -67,10 +69,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Проецин® — Растительный препарат при синусите",
+    title: "Проецин® сироп — Растительный препарат при синусите",
     description:
-      "Комбинированный растительный препарат для лечения острого и хронического риносинусита.",
-    images: ["/proetsin.webp"],
+      "Проецин® сироп — комбинированный растительный препарат для лечения острого и хронического риносинусита.",
+    images: ["/proetsinsirop.webp"],
   },
   other: {
     "telegram:channel": "@SpringPharmaceutic",
