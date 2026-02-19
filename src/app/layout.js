@@ -1,76 +1,88 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Head from "next/head";
-import { NextSeo } from "next-seo";
-// import { DefaultSeo } from 'next-seo';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata = {
-  title: "МЕДИРЕН",
-  description: "Mediren - МЕДИРЕН",
-  url: "https://mediren.netlify.app",
-  image: "https://mediren.netlify.app/mediren-logo.svg",
-  content: "МЕДИРЕН",
+  metadataBase: new URL("https://proetsin.uz"),
+  title: "Проецин® — Растительный препарат при синусите | Таблетки №60",
+  description:
+    "Проецин® — комбинированный растительный препарат с секретолитическим, противовоспалительным и противовирусным действием для лечения острого и хронического риносинусита. Производитель: Spring Pharmaceutic.",
+  keywords: [
+    "Проецин",
+    "проецин таблетки",
+    "синусит лечение",
+    "риносинусит",
+    "простуда",
+    "секретолитический препарат",
+    "противовоспалительный",
+    "растительный препарат",
+    "Spring Pharmaceutic",
+    "фитопрепарат",
+    "противовирусный",
+    "proetsin",
+    "sinusit",
+    "burni tiqilishi",
+    "o'simlik preparati",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "EeNrX_Vhd4bMEJnslGv6D89shImpFKT1eTXHeeqUF8I",
+  },
+  alternates: {
+    canonical: "https://proetsin.uz",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://proetsin.uz",
+    title: "Проецин® — Растительный препарат при синусите",
+    description:
+      "Комбинированный растительный препарат с секретолитическим и противовоспалительным действием для лечения острого и хронического риносинусита.",
+    siteName: "PROETSIN",
+    images: [
+      {
+        url: "/proetsin.webp",
+        width: 900,
+        height: 800,
+        alt: "Проецин® таблетки",
+      },
+      {
+        url: "/proetsin-logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Проецин логотип",
+      },
+    ],
+    locale: "ru_RU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Проецин® — Растительный препарат при синусите",
+    description:
+      "Комбинированный растительный препарат для лечения острого и хронического риносинусита.",
+    images: ["/proetsin.webp"],
+  },
+  other: {
+    "telegram:channel": "@SpringPharmaceutic",
+    "instagram:account": "@springpharmaceutic",
+    "article:publisher": "https://www.facebook.com/spring.pharm.3/",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="EeNrX_Vhd4bMEJnslGv6D89shImpFKT1eTXHeeqUF8I"
-        />
-        <link rel="canonical" href="https://www.mediren.uz/" />
-        <meta property="og:url" content="https://mediren.uz/" />
-        <meta property="og:title" content="МЕДИРЕН" />
-        <meta property="og:description" content="МЕДИРЕН" />
-        <meta
-          property="og:image"
-          content="https://mediren.netlify.app/mediren-logo.svg"
-        />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
-        <meta
-          property="og:image"
-          content="https://mediren.netlify.app/mediren.png"
-        />
-        <meta property="og:image:width" content="900" />
-        <meta property="og:image:height" content="800" />
-        <meta
-          property="og:image"
-          content="https://mediren.netlify.app/mediren.png"
-        />
-        <meta
-          property="og:image"
-          content="https://mediren.netlify.app/mediren.png"
-        />
-        <meta property="og:site_name" content="МЕДИРЕН" />
-        {/* Telegram */}
-        <meta property="telegram:channel" content="@SpringPharmaceutic" />
-        {/*Instagram*/}
-        <meta property="instagram:account" content="@springpharmaceutic/" />
-        {/*Facebook*/}
-        <meta
-          property="article:publisher"
-          content="https://www.facebook.com/spring.pharm.3/"
-        />
-        {/*Email*/}
-        <meta property="email" content="spring_pharmaceutic@gmail.com" />
-      </head>
-      <body className={inter.className}>
-        {/*<DefaultSeo*/}
-        {/*    title="Invirep"*/}
-        {/*    description="Invirep"*/}
-        {/*    openGraph={{*/}
-        {/*        type: 'website',*/}
-        {/*        url: 'https://invirep.vercel.app',*/}
-        {/*        site_name: 'Invirep',*/}
-        {/*    }}*/}
-        {/*/>*/}
-        {children}
-      </body>
+    <html lang="ru">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

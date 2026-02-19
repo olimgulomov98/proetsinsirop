@@ -1,27 +1,78 @@
-import { NextSeo } from "next-seo";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "PROETSIN® таблетки №60",
+  description:
+    "Комбинированный растительный препарат для лечения заболеваний почек и мочевыводящих путей. Мочегонное, спазмолитическое, противовоспалительное, противомикробное действие.",
+  image: "https://proetsin.uz/proetsin.webp",
+  brand: {
+    "@type": "Brand",
+    name: "Spring Pharmaceutic",
+  },
+  manufacturer: {
+    "@type": "Organization",
+    name: 'ООО "SPRING PHARMACEUTIC"',
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "UZ",
+      addressRegion: "Наманганская область",
+      addressLocality: "Касансайский район",
+      streetAddress: "Кукимбой, Навбахор МСГ, улица Булак, дом 129",
+    },
+    telephone: "+998996942363",
+    email: "spring_pharmaceutic@gmail.com",
+    sameAs: [
+      "https://www.instagram.com/springpharmaceutic/",
+      "https://www.facebook.com/spring.pharm.3/",
+      "https://t.me/SpringPharmaceutic",
+    ],
+  },
+  category: "Фитопрепараты, урология",
+  url: "https://proetsin.uz",
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="xl:max-w-[1110px] my-0 mx-auto w-[90%]">
         <div className="h-[80px] flex items-center justify-between">
           <a href="#">
-            <img
-              height={50}
-              width={100}
-              className={"block md:hidden"}
-              src="/mediren-logo.svg"
-              alt="mediren"
-              loading={"lazy"}
-            />
-            <img
-              width={250}
-              height={200}
-              className={"hidden md:block"}
-              src="/mediren-logo.svg"
-              alt="mediren"
-              loading={"lazy"}
-            />
+            <svg
+              width="300"
+              height="140"
+              viewBox="0 0 500 140"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="500" height="160" fill="white" />
+
+              <text
+                x="50%"
+                y="55%"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="72"
+                font-weight="700"
+                fill="#4CAF50"
+                letter-spacing="2"
+              >
+                Proetsin
+              </text>
+
+              <text
+                x="415"
+                y="55"
+                font-family="Arial"
+                font-size="24"
+                fill="#4CAF50"
+              >
+                ®
+              </text>
+            </svg>
           </a>
           <h3 className="text-[11px] md:text-[18px] md:block font-medium">
             Tel: +998 99 694 23 63
@@ -29,14 +80,14 @@ export default function Home() {
         </div>
         <div className="mt-[50px]">
           <h2 className="font-semibold text-center text-4xl font-roboto">
-            « МЕДИРЕН ® »
+            « PROETSIN ® »
           </h2>
           <div className="flex justify-center flex-wrap md:flex-nowrap md:items-end">
             <img
               height={600}
               width={600}
               className="hidden md:block"
-              src="/mediren.png"
+              src="/proetsin.webp"
               alt="инвиреп"
               loading={"lazy"}
             />
@@ -52,58 +103,47 @@ export default function Home() {
               height={300}
               width={300}
               className="block md:hidden"
-              src="/mediren.png"
+              src="/proetsin.webp"
               alt="Invirep"
               loading={"lazy"}
             />
-
-            {/*<img*/}
-            {/*    className="h:[50vh] md:h-[60vh]"*/}
-            {/*    src="/Invirep.webp"*/}
-            {/*    alt="invirep, ИНВИРЕП"/>*/}
           </div>
           <h3 className="text-xl md:text-2xl mt-5 text-[#0C54A0] font-semibold font-roboto mb-3">
-            ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ
+            ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ Проецин® таблетки №30
           </h3>
-          <div className="text-[14px] md:text-[16px] font-roboto font-light">
-            <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">МЕДИРЕН® таблетки №60</span>
-              </strong>
-            </div>
+          <div className="text-[14px] md:text-[16px] font-roboto font-light text-justify leading-relaxed max-w-[700px] px-4 md:px-6">
             <div className="mb-4">
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">
-                  Торговое название: МЕДИРЕН®
+                  Торговое название: Проецин® .
                 </span>{" "}
-              </strong>
-            </div>
-            <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">Лекарственная форма: </span>{" "}
-                таблетка
               </strong>
             </div>
             <div className="mb-4">
               <p className="font-roboto text-[14px] md:text-[16px]">
                 <strong className="font-medium">
                   <span className="text-[#0C54A0]">
-                    Форма выпуска, упаковка:
+                    Форма выпуска, упаковка и состав препарата Проецин®
                   </span>
                 </strong>{" "}
-                Таблетки, покрытые оболочкой, оранжевые, круглые,
-                двояковыпуклые, с гладкой поверхностью.
               </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Состав препарата:</span>
               </strong>
+              <p className="mt-2 font-medium">
+                Таблетки, покрытые оболочкой зеленого цвета, круглые,
+                двояковыпуклые, с гладкой поверхностью; на изломе видны три
+                слоя: внутренний — от светло-коричневого с зеленоватым оттенком
+                до коричневого цвета, допустимы белые вкрапления; средний —
+                белого цвета; наружный — зеленого цвета.
+              </p>
               <table className="border-collapse border border-slate-300 w-full mt-3 mb-3 text-[14px]">
                 <thead>
                   <tr className="bg-[#f5f5f5]">
                     <th className="border border-slate-300 text-left px-3 py-2">
-                      Активные компоненты:
+                      Измельченное лекарственное растительное сырье
                     </th>
                     <th className="border border-slate-300 text-center px-3 py-2">
                       1 таб.
@@ -112,16 +152,16 @@ export default function Home() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td
-                      className="border border-slate-300 px-3 py-2"
-                      colSpan={2}
-                    >
-                      измельченное лекарственное растительное сырье (порошок):
+                    <td className="border border-slate-300 px-3 py-2">
+                      горечавки желтой корни (Gentianae luteae radicibus)
+                    </td>
+                    <td className="border border-slate-300 px-3 py-2 text-center">
+                      6 мг
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-slate-300 px-3 py-2">
-                      золототысячника трава (Centaurii herba)
+                      первоцвета цветки (Primulae flores)
                     </td>
                     <td className="border border-slate-300 px-3 py-2 text-center">
                       18 мг
@@ -129,8 +169,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="border border-slate-300 px-3 py-2">
-                      любистока лекарственного корни (Levisticii officinalis
-                      radices)
+                      щавеля трава (Rumicis herbae)
                     </td>
                     <td className="border border-slate-300 px-3 py-2 text-center">
                       18 мг
@@ -138,8 +177,15 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="border border-slate-300 px-3 py-2">
-                      розмарина обыкновенного листья (Rosmarini officinalis
-                      folia)
+                      бузины черной цветки (Sambuci nigrae flores)
+                    </td>
+                    <td className="border border-slate-300 px-3 py-2 text-center">
+                      18 мг
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 px-3 py-2">
+                      вербены лекарственной трава (Verbenae officinale herbae)
                     </td>
                     <td className="border border-slate-300 px-3 py-2 text-center">
                       18 мг
@@ -148,87 +194,102 @@ export default function Home() {
                 </tbody>
               </table>
               <p className="font-medium">
-                Вспомогательные вещества: воск горный гликолевый, глюкоза
-                жидкая, декстрин, кальция карбонат, касторовое масло
-                нерафинированное, крахмал кукурузный, кремния диоксид коллоидный
-                безводный, лактозы моногидрат, магния стеарат, повидон K30,
-                рибофлавин (E101).
+                Вспомогательные вещества: желатин, лактозы моногидрат, крахмал
+                картофельный, кремния диоксид коллоидный безводный, сорбитол,
+                стеариновая кислота, сополимер бутилметакрилата основной,
+                кальция карбонат (Е170), клещевины обыкновенной семян масло
+                (касторовое масло), хлорофиллина медный комплекс (Е141)
+                (хлорофиллина медный комплекс, глюкозы сироп), декстрин, глюкоза
+                жидкая, индигокармина лак алюминиевый (Е132) (индигокармин,
+                алюминия гидроксид), магния оксид, крахмал кукурузный, воск
+                горный гликолевый, рибофлавин (Е101), шеллак, сахароза, тальк,
+                титана диоксид (Е171).
               </p>
               <p className="mt-2 font-medium">
-                20 шт. - блистеры (3) - пачки картонные.
-              </p>
-            </div>
-            <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">Группа: </span>
-                <span className="underline">
-                  Фитопрепарат, применяемый при заболеваниях почек и
-                  мочевыводящих путей
-                </span>
-              </strong>
-            </div>
-            <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">Терапевтическая группа: </span>
-                <span className="underline">
-                  Средства, применяемые в урологии; другие средства, применяемые
-                  в урологии
-                </span>
-              </strong>
-            </div>
-            <div className="mb-4">
-              <strong className="font-medium">
-                <span className="text-[#0C54A0]">Действие</span>
-              </strong>
-              <p className="mt-2 font-medium">
-                Механизм действия и свойства Медирен® таблеток, соответствует
-                совокупно указанным, аналогичным действующим веществам,
-                указанным информацией справочника Видаль. Комбинированный
-                препарат растительного происхождения, оказывает мочегонное,
-                спазмолитическое, противовоспалительное, противомикробное
-                действие.
+                20 шт. — блистеры (3) — пачки картонные.
               </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">
-                  Показания препарата Медирен®
+                  Клинико-фармакологическая группа:{" "}
+                </span>
+                <span className="text-[#0C54A0] underline">
+                  Комбинированный препарат растительного происхождения с
+                  секретолитическим, секретомоторным, противовоспалительным и
+                  противовирусным действием
                 </span>
               </strong>
+            </div>
+            <div className="mb-4">
+              <strong className="font-medium">
+                <span className="text-[#0C54A0]">
+                  Фармако-терапевтическая группа:{" "}
+                </span>
+                <span className="text-[#0C54A0] underline">
+                  Другие препараты для лечения простудных заболеваний
+                </span>
+              </strong>
+            </div>
+            <div className="mb-4">
+              <strong className="font-medium">
+                <span className="text-[#0C54A0]">
+                  Фармакологическое действие
+                </span>
+              </strong>
+              <p className="mt-2 font-medium font-semibold">
+                Механизм действия и фармакодинамические свойства
+              </p>
+              <p className="mt-2 font-medium">
+                Фармакологические свойства обусловлены биологически активными
+                веществами, входящими в состав препарата.
+              </p>
+              <p className="mt-2 font-medium">
+                Проецин® оказывает секретолитическое, секретомоторное,
+                противовоспалительное, противоотечное, умеренное
+                антибактериальное и противовирусное действие. Способствует
+                оттоку экссудата из придаточных пазух носа и верхних дыхательных
+                путей, предупреждая развитие осложнений.
+              </p>
+            </div>
+            <div className="mb-4">
+              <strong className="font-medium">
+                <span className="text-[#0C54A0]">
+                  Показания препарата Проецин®
+                </span>
+              </strong>
+              <p className="mt-2 font-medium">
+                Взрослым и детям от 6 лет и старше при:
+              </p>
               <ul className="list-disc pl-6 mt-2 space-y-1 font-medium">
                 <li>
-                  взрослым и детям в возрасте от 6 до 18 лет в комплексной
-                  терапии острых и хронических инфекций мочевого пузыря
-                  (цистита);
-                </li>
-                <li>
-                  при инфекционном и неинфекционном хроническом воспалении почек
-                  (пиелонефрит, гломерулонефрит, интерстициальный нефрит);
-                </li>
-                <li>
-                  в качестве средства, препятствующего образованию мочевых
-                  камней (также после удаления мочевых камней).
+                  остром и хроническом синусите (риносинусите), сопровождающемся
+                  образованием вязкого секрета.
                 </li>
               </ul>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">Режим дозирования</span>
+                <span className="text-[#0C54A0]">Режим дозирования.</span>
               </strong>
               <p className="mt-2 font-medium">
-                Рекомендуемая доза: 3 раза/сут (утром, днём и вечером) в
+                Принимают внутрь, не разжевывая, запивая небольшим количеством
+                воды, независимо от приема пищи.
+              </p>
+              <p className="mt-2 font-medium">
+                Рекомендуемая доза: 3 раза/сут (утром, днем и вечером) в
                 соответствии с приведенной ниже таблицей.
               </p>
               <table className="border-collapse border border-slate-300 w-full mt-3 mb-3 text-[14px]">
                 <thead>
                   <tr className="bg-[#f5f5f5]">
-                    <th className="border border-slate-300 px-3 py-2 text-left">
+                    <th className="border border-slate-300 px-3 py-2 text-left font-semibold">
                       Возраст
                     </th>
-                    <th className="border border-slate-300 px-3 py-2 text-center">
+                    <th className="border border-slate-300 px-3 py-2 text-center font-semibold">
                       Разовая доза
                     </th>
-                    <th className="border border-slate-300 px-3 py-2 text-center">
+                    <th className="border border-slate-300 px-3 py-2 text-center font-semibold">
                       Суточная доза
                     </th>
                   </tr>
@@ -236,7 +297,7 @@ export default function Home() {
                 <tbody>
                   <tr>
                     <td className="border border-slate-300 px-3 py-2">
-                      Дети в возрасте 6–11 лет
+                      Дети в возрасте от 6 до 11 лет
                     </td>
                     <td className="border border-slate-300 px-3 py-2 text-center">
                       1 таблетка
@@ -247,7 +308,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="border border-slate-300 px-3 py-2">
-                      Подростки в возрасте 12 лет и старше, взрослые
+                      Дети в возрасте старше 12 лет и взрослые
                     </td>
                     <td className="border border-slate-300 px-3 py-2 text-center">
                       2 таблетки
@@ -258,25 +319,21 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
+              <p className="font-medium mt-2">
+                Длительность курса лечения составляет 7-14 дней. Увеличение
+                продолжительности и проведение повторных курсов лечения возможно
+                по рекомендации врача.
+              </p>
+              <p className="mt-2 font-medium">
+                Необходимо проинформировать пациента о том, что, если через 7-14
+                дней лечения улучшения не наступает или симптомы усугубляются,
+                или появляются новые симптомы, необходимо проконсультироваться с
+                врачом.
+              </p>
+              <p className="mt-2 font-medium font-semibold">Дети</p>
               <p className="font-medium">
-                Продолжительность лечения зависит от течения заболевания. После
-                наступления улучшения (завершения острой фазы заболевания)
-                следует продолжить лечение препаратом в течение 2–4 недель.
-                Увеличение продолжительности и проведение повторных курсов
-                лечения возможно по рекомендациям врача.
-              </p>
-              <p className="mt-2 font-medium">
-                <strong>Дети.</strong> Безопасность и эффективность у детей в
-                возрасте от 0 до 6 лет на настоящий момент не установлены.
-                Данные отсутствуют.
-              </p>
-              <p className="mt-2 font-medium">
-                <strong>Способ применения</strong>
-                <br />
-                Таблетку принимают внутрь, независимо от приема пищи, не
-                разжёвывая, запивая достаточным количеством воды (например, 1
-                стакан). Во время лечения препаратом рекомендуется потребление
-                большого количества жидкости.
+                Безопасность и эффективность у детей в возрасте от 0 до 6 лет на
+                настоящий момент не установлены. Данные отсутствуют.
               </p>
             </div>
             <div className="mb-4">
@@ -284,19 +341,36 @@ export default function Home() {
                 <span className="text-[#0C54A0]">Побочное действие</span>
               </strong>
               <p className="mt-2 font-medium">
-                <span className="font-medium">Со стороны ЖКТ:</span> часто –
-                тошнота, рвота, диарея.
-              </p>
-              <p className="mt-2 font-medium">
                 <span className="font-medium">
                   Со стороны иммунной системы:
                 </span>{" "}
-                частота неизвестна – аллергические реакции. При появлении первых
-                признаков аллергической реакции следует прекратить прием
-                препарата и обратиться к врачу; при появлении побочных эффектов,
-                указанных в инструкции, или их усугублении, или появлении любых
-                других побочных эффектов, не указанных в инструкции, необходимо
-                обратиться к врачу.
+                нечасто — местные аллергические реакции (кожная сыпь,
+                покраснение кожи, зуд); неизвестно — системные аллергические
+                реакции (ангионевротический отек, отек лица).
+              </p>
+              <p className="mt-2 font-medium">
+                <span className="font-medium">
+                  Со стороны дыхательной системы, органов грудной клетки и
+                  средостения:
+                </span>{" "}
+                неизвестно — одышка.
+              </p>
+              <p className="mt-2 font-medium">
+                <span className="font-medium">Со стороны ЖКТ:</span> нечасто —
+                тошнота, боль в эпигастральной области.
+              </p>
+            </div>
+            <div className="mb-4">
+              <strong className="font-medium">
+                <span className="text-[#0C54A0]">
+                  Сообщение о подозреваемых нежелательных реакциях
+                </span>
+              </strong>
+              <p className="mt-2 font-medium">
+                Важно сообщать о подозреваемых нежелательных реакциях после
+                регистрации лекарственного препарата с целью обеспечения
+                непрерывного мониторинга соотношения «польза-риск»
+                лекарственного препарата.
               </p>
             </div>
             <div className="mb-4">
@@ -307,14 +381,9 @@ export default function Home() {
               </strong>
               <ul className="list-disc pl-6 mt-2 space-y-1 font-medium">
                 <li>
-                  повышенная чувствительность к активным веществам препарата, к
-                  другим растениям семейства зонтичные (например, анис,
-                  фенхель), анетолу (компонент эфирных масел), и/или к любому из
-                  вспомогательных веществ, входящих в состав препарата;
-                </li>
-                <li>
-                  заболевания желудочно-кишечного тракта в фазе обострения (в
-                  т.ч. гастрит, язвенная болезнь желудка).
+                  повышенная чувствительность к активным компонентам препарата
+                  и/или к любому из вспомогательных веществ, входящих в состав
+                  препарата.
                 </li>
               </ul>
             </div>
@@ -326,22 +395,20 @@ export default function Home() {
               </strong>
               <p className="mt-2 font-semibold">Беременность</p>
               <p className="font-medium">
-                Применение препарата во время беременности возможно только по
-                назначению врача, в случае если предполагаемая польза для матери
-                превышает потенциальный риск для плода и ребенка.
+                Применение препарата при беременности возможно только по
+                назначению врача.
               </p>
               <p className="mt-2 font-semibold">
                 Период грудного вскармливания
               </p>
               <p className="font-medium">
-                Применение препарата в период грудного вскармливания возможно
-                только по назначению врача, в случае если предполагаемая польза
-                для матери превышает потенциальный риск для ребенка.
+                Препарат не рекомендуется принимать в период грудного
+                вскармливания (в связи с отсутствием опыта его клинического
+                применения).
               </p>
               <p className="mt-2 font-semibold">Фертильность</p>
               <p className="font-medium">
-                Данные о влиянии препарата Медирен® на фертильность у людей
-                отсутствуют.
+                Данные о влиянии препарата на фертильность отсутствуют.
               </p>
             </div>
             <div className="mb-4">
@@ -349,8 +416,8 @@ export default function Home() {
                 <span className="text-[#0C54A0]">Применение у детей</span>
               </strong>
               <p className="mt-2 font-medium">
-                Противопоказано применение препарата в детском возрасте до 6
-                лет.
+                Противопоказан детям в возрасте до 6 лет (из-за недостаточности
+                клинических данных).
               </p>
             </div>
             <div className="mb-4">
@@ -358,95 +425,106 @@ export default function Home() {
                 <span className="text-[#0C54A0]">Особые указания</span>
               </strong>
               <p className="mt-2 font-medium">
-                Если симптомы заболевания сохраняются, ухудшаются, повторяются
-                периодически или появляются новые симптомы, необходимо
-                обратиться за консультацией к врачу.
+                Необходимо проинформировать пациента о том, что, если через 7-14
+                дней лечения улучшения не наступает или симптомы усугубляются,
+                или появляются новые симптомы, необходимо проконсультироваться с
+                врачом.
               </p>
               <p className="mt-2 font-medium">
-                Необходимо проинформировать пациента, что в случае
-                воспалительных заболеваний почек, появления лихорадки, спазмов,
-                крови в моче, нарушений мочеиспускания, острой задержки мочи,
-                болей при мочеиспускании необходимо обратиться к врачу.
+                В случае, если у пациента появились носовые кровотечения,
+                лихорадка, сильные головные или лицевые боли, гнойные выделения
+                из носа, нарушение зрения, асимметрия средней части лица или
+                глаз или онемение лица, необходимо обратиться за консультацией к
+                врачу, поскольку перечисленные симптомы считаются серьезными для
+                всех форм риносинуситов, что требует проведения обследования и
+                срочного лечения.
               </p>
               <p className="mt-2 font-medium">
-                При отеках, вызванных нарушениями функции сердца или почек,
-                потребление большого количества жидкости противопоказано.
+                Пациентам с гастритом и другими заболеваниями
+                желудочно-кишечного тракта в фазе обострения и пациентам с
+                чувствительным желудком рекомендуется принимать препарат
+                Проецин® с осторожностью, желательно после еды, запивая стаканом
+                воды.
               </p>
               <p className="mt-2 font-semibold font-medium">
                 Вспомогательные вещества
               </p>
               <p className="font-medium">
-                Пациентам с недостаточностью лактазы, дефицитом сахаразы/
-                изомальтазы, непереносимостью лактозы, фруктозы или
-                глюкозо-галактозной мальабсорбцией не следует принимать препарат
-                Медирен®. Возможен прием препарата Медирен®, капли для приема
-                внутрь, который не содержит вышеуказанные сахара.
+                Пациентам с редкой наследственной непереносимостью фруктозы,
+                непереносимостью галактозы, дефицитом лактазы,
+                глюкозо-галактозной мальабсорбцией или сахаразо-изомальтазной
+                недостаточностью не следует принимать препарат, таблетки,
+                покрытые оболочкой. Возможен прием препарата в лекарственных
+                формах капли для приема внутрь или сироп, которые не содержат
+                вышеуказанных сахаров.
               </p>
               <p className="mt-2 font-semibold font-medium">
                 Информация для пациентов с сахарным диабетом:
               </p>
               <p className="font-medium">
-                содержание усваиваемых углеводов в разовой дозе (1 таблетка)
-                соответствует менее чем 0.04 ХЕ, в максимальной суточной дозе (6
-                таблеток) – менее 0.24 ХЕ.
+                одна таблетка, покрытая оболочкой, содержит 0.01 ХЕ.
               </p>
               <p className="mt-2 font-semibold font-medium">
                 Влияние на способность к управлению транспортными средствами и
                 механизмами
               </p>
               <p className="font-medium">
-                Применение препарата Медирен® не оказывает влияния на
-                способность к выполнению потенциально опасных видов
-                деятельности, требующих повышенной концентрации внимания и
-                быстроты психомоторных реакций (управление транспортными
-                средствами, работа с движущимися механизмами, работа диспетчера
-                и оператора).
+                При применении в рекомендуемых дозах препарат Проецин® не
+                оказывает влияния на способность к выполнению потенциально
+                опасных видов деятельности, требующих повышенной концентрации
+                внимания и быстроты психомоторных реакций (управление
+                транспортными средствами, работа с движущимися механизмами,
+                работа диспетчера и оператора).
               </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">Передозировка</span>
+                <span className="text-[#0C54A0]">Передозировка.</span>
               </strong>
               <p className="mt-2 font-medium">
-                При передозировке возможно усиление выраженности дозозависимых
-                нежелательных реакций.
+                До настоящего времени случаи передозировки при применении
+                препарата не зарегистрированы.
               </p>
-              <p className="mt-1 font-medium">Лечение: симптоматическое.</p>
+              <p className="mt-2 font-medium">
+                Симптомы: возможно усиление выраженности дозозависимых побочных
+                эффектов.
+              </p>
+              <p className="mt-2 font-medium">
+                Лечение: проведение симптоматической терапии.
+              </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">
-                  Лекарственное взаимодействие
+                  Лекарственное взаимодействие.
                 </span>
               </strong>
               <p className="mt-2 font-medium">
-                Комбинация с антибактериальными средствами возможна и
-                целесообразна.
+                Комбинация с антибактериальными лекарственными средствами
+                возможна и целесообразна.
               </p>
-              <p className="mt-1 font-medium">
-                Исследования взаимодействия с другими лекарственными препаратами
-                не проводились.
+              <p className="mt-2 font-medium">
+                Взаимодействие с другими лекарственными средствами до настоящего
+                времени неизвестно.
               </p>
             </div>
-
             <div className="mb-4">
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">
-                  Условия хранения препарата
+                  Условия хранения препарата.
                 </span>
               </strong>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 font-medium">
                 Препарат следует хранить в недоступном для детей месте при
                 температуре не выше 25°С.
               </p>
             </div>
             <div className="mb-4">
               <strong className="font-medium">
-                <span className="text-[#0C54A0]">Срок годности препарата</span>
+                <span className="text-[#0C54A0]">Срок годности препарата.</span>
               </strong>
-              <p className="mt-2 text-[14px]">
-                Срок годности — 2 года.
-                <br />
+              <p className="mt-2 font-medium">Срок годности — 2 года.</p>
+              <p className="mt-2 font-medium">
                 Не применять по истечении срока годности.
               </p>
             </div>
@@ -454,7 +532,7 @@ export default function Home() {
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Условия реализации</span>
               </strong>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 font-medium">
                 Препарат отпускают без рецепта.
               </p>
             </div>
@@ -462,7 +540,7 @@ export default function Home() {
               <strong className="font-medium">
                 <span className="text-[#0C54A0]">Производитель:</span>
               </strong>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 font-medium">
                 ООО &quot;SPRING PHARMACEUTIC&quot; СП Великобритания.
               </p>
             </div>
@@ -473,11 +551,10 @@ export default function Home() {
                   деятельности:
                 </span>
               </strong>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 font-medium">
                 Республика Узбекистан, Наманганская область, Касансайский район,
-                Кукимбой, Навбахор МСГ, улица Булак, дом 129.
-                <br />
-                Тел.: +998996942363
+                Кукимбой, Навбахор МСГ, улица Булак, дом 129. Тел.:
+                +998996942363
               </p>
             </div>
 
