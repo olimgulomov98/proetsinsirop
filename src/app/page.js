@@ -109,7 +109,7 @@ export default function Home() {
             />
           </div>
           <h3 className="text-xl md:text-2xl mt-5 text-[#0C54A0] font-semibold font-roboto mb-3">
-            ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ Проецин® таблетки №30
+            ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ Проецин® таблетки №60
           </h3>
           <div className="text-[14px] md:text-[16px] font-roboto font-light text-justify leading-relaxed max-w-[700px] px-4 md:px-6">
             <div className="mb-4">

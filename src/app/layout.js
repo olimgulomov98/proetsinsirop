@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata = {
   metadataBase: new URL("https://proetsin.uz"),
-  title: "Проецин® — Растительный препарат при синусите | Таблетки №60",
+  title: "PROETSIN",
   description:
     "Проецин® — комбинированный растительный препарат с секретолитическим, противовоспалительным и противовирусным действием для лечения острого и хронического риносинусита. Производитель: Spring Pharmaceutic.",
   keywords: [
