@@ -3,23 +3,23 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://proetsinsirop.uz/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.00</priority>
         <image:image>
             <image:loc>https://proetsinsirop.uz/proetsinsirop.webp</image:loc>
-            <image:title>Проецин® сироп — растительный препарат при синусите</image:title>
-            <image:caption>Проецин® сироп 100 мл — комбинированный растительный препарат с секретолитическим и противовоспалительным действием для лечения острого и хронического риносинусита</image:caption>
+            <image:title>Проецин® сироп 100 мл — растительный препарат при синусите</image:title>
+            <image:caption>Проецин® (Proetsin) сироп 100 мл — комбинированный растительный препарат с секретолитическим и противовоспалительным действием для лечения острого и хронического риносинусита. Sinusit va burun tiqilishini davolash uchun o'simlik dorisi.</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://proetsinsirop.uz/proetsin-logo.svg</image:loc>
-            <image:title>Проецин логотип</image:title>
-            <image:caption>Логотип препарата Проецин® от Spring Pharmaceutic</image:caption>
+            <image:title>Проецин® (Proetsin) логотип — Spring Pharmaceutic</image:title>
+            <image:caption>Логотип препарата Проецин® от Spring Pharmaceutic — растительный препарат при синусите</image:caption>
         </image:image>
     </url>
     <url>
         <loc>https://proetsinsirop.uz/instruction_ru.docx</loc>
-        <lastmod>2026-02-19</lastmod>
+        <lastmod>2026-02-26</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
     </url>

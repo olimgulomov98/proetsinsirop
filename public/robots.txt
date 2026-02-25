@@ -1,6 +1,8 @@
 # Robots.txt for proetsinsirop.uz
 User-agent: *
 Allow: /
+Allow: /proetsinsirop.webp
+Allow: /proetsin-logo.svg
 Disallow: /_next/static/
 Disallow: /_next/image/
 
